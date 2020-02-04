@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
     
-    .description-block {
+    .header-description {
         display: flex;
         flex: 0 0 auto;
 
@@ -15,13 +15,13 @@
             margin: 3% 0 0 5%;
         }
     }
-    .login-block {
+    .main-block {
         display: flex;
         flex: 1 0 auto;
         justify-content: center;
         align-items: center;
 
-        .login-block__form {
+        .main-block__form {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -30,32 +30,27 @@
             min-height: 40%;
             width: 20%;
 
-            .auth-group {
+            .main-block__form-content {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
 
-                .login-block__input-password {
-                    border-radius: 4px;
-                    border: 1px solid $grey;
-                    height: 19px;
-                }
-                .login-block__input-email {
-                    border-radius: 4px;
-                    border: 1px solid $grey;
-                    height: 19px;
-                }
-
-                .login-block__label {
+                .main-block__form-content__description {
                     font-size: 14px;
                     padding-bottom: 5px;
                     font-weight: $medium;
                 }
+                .main-block__form-content__input {
+                    border-radius: 4px;
+                    border: $border;
+                    height: 25px;
+                }
+
                 & > [type='submit'] {
                     margin-top: 4vh;
                     padding: 6px;
                     font-size: 16px;
-                    font-weight: $medium;
+                    font-weight: $light;
                     background-color: $grey;
                     color: $white;
                     border-color: transparent;
@@ -64,7 +59,6 @@
                     &:hover {
                         background-color: $red;
                         color: $black;
-                        //border-color: $black;
                         transition: all 0.2s ease-in-out;
                         cursor: pointer;
                     }
@@ -75,7 +69,7 @@
                     margin-top: 4vh;
                     padding: 6px;
                     font-size: 16px;
-                    font-weight: $medium;
+                    font-weight: $light;
                     background-color: $grey;
                     color: $white;
                     border-color: transparent;
@@ -84,7 +78,6 @@
                     &:hover {
                         background-color: $red;
                         color: $black;
-                        //border-color: $black;
                         transition: all 0.2s ease-in-out;
                         cursor: pointer;
                     }
@@ -98,14 +91,16 @@
         justify-content: space-evenly;
         align-items: center;
         height: 15vh;
-        background-color: #404040;
+        background-color: $grey;
 
         & > h3 {
             font-size: 15px;
+            font-weight: $light;
             color: $white
         }
         & > p {
             font-size: 12px;
+            font-weight: $light;
             color: $white;
         }
     }
