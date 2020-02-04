@@ -8,11 +8,11 @@ class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
       errors: {
-        email: "неверная почта",
-        password: "неверный пароль"
+        email: 'неверная почта',
+        password: 'неверный пароль'
       }
     };
   }
@@ -51,40 +51,40 @@ class Login extends React.Component {
     if (email && password) {
       return (
         <div className="wrapper-login">
-          <header className="description-block">
+          <header className="header-description">
             <p>Конструктор помещений</p>
           </header>
-          <main className="login-block">
-            <form className="login-block__form" onSubmit={this.onSubmit}>
-              <div className="auth-group">
-                <div className="login-block__label">Почта</div>
+          <main className="main-block">
+            <form className="main-block__form" onSubmit={this.onSubmit}>
+              <div className="main-block__form-content">
+                <div className="main-block__form-content__description">Почта</div>
                 <input
                   onChange={this.onChange}
                   value={email}
                   errors={errors}
                   id="email"
                   type="email"
-                  className="login-block__input-email"
+                  className="main-block__form-content__input"
                 />
                 {/*<div className='login-block__errors'>
                     {errors.email}
                 </div>*/}
               </div>
-              <div className="auth-group">
-                <div className="login-block__label">Пароль</div>
+              <div className="main-block__form-content">
+                <div className="main-block__form-content__description">Пароль</div>
                 <input
                   onChange={this.onChange}
                   value={password}
                   errors={errors}
                   id="password"
                   type="password"
-                  className="login-block__input-password"
+                  className="main-block__form-content__input"
                 />
                 {/*<div className='login-block__errors'>
                     {errors.password}
                 </div>*/}
               </div>
-              <div className="auth-group">
+              <div className="main-block__form-content">
                 <Link to='/dashboard'>
                     <input type="submit" value="Войти" />
                 </Link>
@@ -100,40 +100,40 @@ class Login extends React.Component {
     }
     return (
       <div className="wrapper-login">
-        <header className="description-block">
+        <header className="header-description">
           <p>Конструктор помещений</p>
         </header>
-        <main className="login-block">
-          <form className="login-block__form" onSubmit={this.onSubmit}>
-            <div className="auth-group">
-              <div className="login-block__label">Почта</div>
+        <main className="main-block">
+          <form className="main-block__form" onSubmit={this.onSubmit}>
+            <div className="main-block__form-content">
+              <div className="main-block__form-content__description">Почта</div>
               <input
                 onChange={this.onChange}
                 value={email}
                 errors={errors}
                 id="email"
                 type="email"
-                className="login-block__input-email"
+                className="main-block__form-content__input"
               />
               {/*<div className='login-block__errors'>
                                 {errors.email}
                             </div>*/}
             </div>
-            <div className="auth-group">
-              <div className="login-block__label">Пароль</div>
+            <div className="main-block__form-content">
+              <div className="main-block__form-content__description">Пароль</div>
               <input
                 onChange={this.onChange}
                 value={password}
                 errors={errors}
                 id="password"
                 type="password"
-                className="login-block__input-password"
+                className="main-block__form-content__input"
               />
               {/*<div className='login-block__errors'>
                     {errors.password}
                 </div>*/}
             </div>
-            <div className="auth-group">
+            <div className="main-block__form-content">
               <input type="submit" value="Войти" />
             </div>
           </form>
