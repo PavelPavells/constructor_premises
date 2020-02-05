@@ -1,0 +1,14 @@
+@import '../../../styles/base.scss';
+
+.wrapper-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0 0 5px;
+
+    .wrapper-header__logo {
+        width: 180px;
+    }
+}
