@@ -1,0 +1,17 @@
+@import '../../../styles/base.scss';
+
+.wrapper-leftbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 0 5px;
+
+    .wrapper-leftbar__navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 15%;
+        min-height: 10%;
+    }
+}
