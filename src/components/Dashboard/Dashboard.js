@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import LeftBar from './LeftBar/LeftBar';
+import OptionBar from './OptionBar/OptionBar';
 import Header from './Header/Header';
 import Canvas from './Canvas/Canvas';
 import RightBar from './RightBar/RightBar';
@@ -25,6 +26,9 @@ class Dashboard extends React.Component {
                         <nav className='wrapper-dashboard__navigation-left'>
                             <LeftBar />
                         </nav>
+                        <nav className='wrapper-dashboard__option-left'>
+                            <OptionBar />
+                        </nav>
                         <section className='wrapper-dashboard__canvas'>
                             <Canvas />
                         </section>
@@ -38,8 +42,8 @@ class Dashboard extends React.Component {
     }
 }
 Dashboard.propTypes = {
-    dashboard: PropTypes.array.isRequired,
-    errors: PropTypes.object.isRequired
+    dashboard: PropTypes.array,
+    errors: PropTypes.object
 }
 const mapStateToProps = state => ({
     dashboard: state.dashboard

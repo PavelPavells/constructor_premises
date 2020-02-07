@@ -3,9 +3,9 @@
 .wrapper-leftbar {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
     height: 100%;
-    padding: 0 5px;
 
     .wrapper-leftbar__navigation {
         display: flex;
@@ -13,5 +13,27 @@
         justify-content: space-evenly;
         height: 15%;
         min-height: 10%;
+
+        img {
+            height: 30px;
+            border-left: 3px solid transparent;
+            padding-left: 4px;
+            padding-right: 6px;
+
+            &:hover {
+                border-left: 3px solid $red;
+                cursor: pointer;
+                transition: all 0.2s ease-in;
+            }
+        }
+    }
+    .wrapper-leftbar__profile {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        background-color: $white;
+        border: $border;
+        border-radius: 50%;
+        margin-bottom: 17px;
     }
 }

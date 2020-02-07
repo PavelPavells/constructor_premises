@@ -7,17 +7,35 @@ class RightBar extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            some: false
+            some: false,
+            zoom: 100
         }
+    }
+    handelChange = event => {
+        event.preventDefault()
+        this.setState(prevState => ({
+            zoom: prevState.zoom++
+        }))
     }
     render() {
         return(
-            <div className='wrapper-rightbar'>right bar</div>
+            <div className='wrapper-rightbar'>
+                <div className='wrapper-rightbar__more-options'></div>
+                <div className='wrapper-rightbar__arrow-less'></div>
+                <div className='wrapper-rightbar__percent'>100%</div>
+                <div className='wrapper-rightbar__arrow-more'></div>
+                <div className='wrapper-rightbar__colorize'></div>
+                <div className='wrapper-rightbar__color-lens'></div>
+                <div className='wrapper-rightbar__wb-sunny'></div>
+                <div className='wrapper-rightbar__save'></div>
+                <div className='wrapper-rightbar__fullscreen'></div>
+                <div className='wrapper-rightbar__settings'></div>
+            </div>
         )
     }
 }
 RightBar.propTypes = {
-    some: PropTypes.bool.isRequired
+    some: PropTypes.bool
 }
 const mapStateToProps = state => ({
     some: state.some

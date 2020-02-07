@@ -6,9 +6,17 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 5px 0 0 5px;
+    padding: 5px 10px 0 5px;
 
     .wrapper-header__logo {
         width: 180px;
     }
+    // .wrapper-header__profile {
+    //     display: flex;
+    //     width: 30px;
+    //     height: 30px;
+    //     border: 1px solid $black;
+    //     border-radius: 50%;
+    //     background-color: $black;
+    // }
 }
