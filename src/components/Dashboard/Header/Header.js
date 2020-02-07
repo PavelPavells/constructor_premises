@@ -8,7 +8,8 @@ class Header extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            some: false
+            some: false,
+            errors: {}
         }
     }
     render() {
@@ -17,12 +18,14 @@ class Header extends React.Component {
                 <div className='wrapper-header__logo'>
                     <img src={logo} alt='' />
                 </div>
+                {/*<div className='wrapper-header__profile'></div>*/}
             </div>
         )
     }
 }
 Header.propTypes = {
-    some: PropTypes.bool.isRequired
+    some: PropTypes.bool,
+    errors: PropTypes.bool
 }
 const mapStateToProps = state => ({
     some: state.some

@@ -15,17 +15,17 @@ class LeftBar extends React.Component {
     render() {
         return(
             <div className='wrapper-leftbar'>
-                
                 <nav className='wrapper-leftbar__navigation'>
                     <img src={loading_project} alt='Загрузить' />
                     <img src={new_project} alt='Новый проект' />
                 </nav>
+                <section className='wrapper-leftbar__profile'></section>
             </div>
         )
     }
 }
 LeftBar.propTypes = {
-    some: PropTypes.bool.isRequired
+    some: PropTypes.bool
 }
 const mapStateToprops = state => ({
     some: state.some
