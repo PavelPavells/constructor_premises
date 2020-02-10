@@ -12,10 +12,12 @@ class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            some: false
+            some: false,
+            toggleOptionBar: true
         }
     }
     render() {
+        //const { toggleOptionBar } = this.state;
         return(
             <div className='wrapper-dashboard'>
                 <header className='wrapper-dashboard__header'>
@@ -28,7 +30,7 @@ class Dashboard extends React.Component {
                         </nav>
                         <nav className='wrapper-dashboard__option-left'>
                             <OptionBar />
-                        </nav>
+                        </nav>            
                         <section className='wrapper-dashboard__canvas'>
                             <Canvas />
                         </section>

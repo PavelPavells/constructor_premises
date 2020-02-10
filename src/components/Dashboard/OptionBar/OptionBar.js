@@ -16,26 +16,36 @@ class OptionBar extends React.Component {
     }
     handleTurnstileChange = event => {
         event.preventDefault();
-        this.setState({ turnstile: !this.state.turnstile })
+        let arrowTurnstile = document.getElementsByClassName('wrapper-optionbar__list-turnstile__photo')[0];
+        arrowTurnstile.classList.toggle('transform-photo');
+        this.setState({ turnstile: !this.state.turnstile });
     }
     handleBarrierChange = event => {
         event.preventDefault();
-        this.setState({ barrier: !this.state.barrier })
+        let arrowBarrier = document.getElementsByClassName('wrapper-optionbar__list-barrier__photo')[0];
+        arrowBarrier.classList.toggle('transform-photo');
+        this.setState({ barrier: !this.state.barrier });
     }
     handleAnadromousChange = event => {
         event.preventDefault();
-        this.setState({ anadromous: !this.state.anadromous })
+        let arrowAnadromous = document.getElementsByClassName('wrapper-optionbar__list-anadromous__photo')[0];
+        arrowAnadromous.classList.toggle('transform-photo');
+        this.setState({ anadromous: !this.state.anadromous });
     }
     handleWallChange = event => {
         event.preventDefault();
-        this.setState({ wall: !this.state.wall })
+        let arrowWall = document.getElementsByClassName('wrapper-optionbar__list-wall__photo')[0];
+        arrowWall.classList.toggle('transform-photo');
+        this.setState({ wall: !this.state.wall });
     }
     handlePremisesChange = event => {
         event.preventDefault();
-        this.setState({ premises: !this.state.premises })
+        let arrowPremises = document.getElementsByClassName('wrapper-optionbar__list-premises__photo')[0];
+        arrowPremises.classList.toggle('transform-photo');
+        this.setState({ premises: !this.state.premises });
     }
     render() {
-        const { turnstile, barrier, anadromous,wall, premises } = this.state;
+        const { turnstile, barrier, anadromous, wall, premises } = this.state;
         return(
             <div className='wrapper-optionbar'>
                 <div className='wrapper-optionbar__list'>
@@ -48,25 +58,25 @@ class OptionBar extends React.Component {
                     {/** ==================== TURNSTILE BLOCK ==================== */}
 
                     <div onClick={this.handleTurnstileChange} className='wrapper-optionbar__list-turnstile'>
-                        <div className='photo'></div>
+                        <div className='wrapper-optionbar__list-turnstile__photo'></div>
                         <span>Турникеты</span>
                     </div>
                         {turnstile ? (
                                 <div className='wrapper-optionbar__list-turnstile__turnstile-figures'>
                                     <section className='wrapper-optionbar__list-turnstile__turnstile-figures__section-one'>
-                                        <div>1</div>
-                                        <div>2</div>
-                                        <div>3</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-turnstile__turnstile-figures__section-two'>
-                                        <div>4</div>
-                                        <div>5</div>
-                                        <div>6</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-turnstile__turnstile-figures__section-three'>
-                                        <div>7</div>
-                                        <div>8</div>
-                                        <div>9</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                 </div>
                             ) : null
@@ -75,25 +85,25 @@ class OptionBar extends React.Component {
                     {/** ==================== BARRIER BLOCK ==================== */}
 
                     <div onClick={this.handleBarrierChange} className='wrapper-optionbar__list-barrier'>
-                        <div></div>
+                        <div className='wrapper-optionbar__list-barrier__photo'></div>
                         <span>Шлагбаумы</span>
                     </div>
                         {barrier ? (
                                 <div className='wrapper-optionbar__list-barrier__barrier-figures'>
                                     <section className='wrapper-optionbar__list-barrier__barrier-figures__section-one'>
-                                        <div>1</div>
-                                        <div>2</div>
-                                        <div>3</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-barrier__barrier-figures__section-two'>
-                                        <div>4</div>
-                                        <div>5</div>
-                                        <div>6</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-barrier__barrier-figures__section-three'>
-                                        <div>7</div>
-                                        <div>8</div>
-                                        <div>9</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                 </div>
                             ) : null
@@ -102,25 +112,25 @@ class OptionBar extends React.Component {
                     {/** ==================== ANADROMOUS BLOCK ==================== */}
 
                     <div onClick={this.handleAnadromousChange} className='wrapper-optionbar__list-anadromous'>
-                        <div></div>
+                        <div className='wrapper-optionbar__list-anadromous__photo'></div>
                         <span>Проходные</span>
                     </div>
                         {anadromous ? (
                                 <div className='wrapper-optionbar__list-anadromous__anadromous-figures'>
                                     <section className='wrapper-optionbar__list-anadromous__anadromous-figures__section-one'>
-                                        <div>1</div>
-                                        <div>2</div>
-                                        <div>3</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-anadromous__anadromous-figures__section-two'>
-                                        <div>4</div>
-                                        <div>5</div>
-                                        <div>6</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-anadromous__anadromous-figures__section-three'>
-                                        <div>7</div>
-                                        <div>8</div>
-                                        <div>9</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                 </div>
                             ) : null
@@ -129,25 +139,25 @@ class OptionBar extends React.Component {
                     {/** ==================== WALL BLOCK ==================== */}
                     
                     <div onClick={this.handleWallChange} className='wrapper-optionbar__list-wall'>
-                        <div></div>
+                        <div className='wrapper-optionbar__list-wall__photo'></div>
                         <span>Стены</span>
                     </div>
                         {wall ? (
                                 <div className='wrapper-optionbar__list-wall__wall-figures'>
                                     <section className='wrapper-optionbar__list-wall__wall-figures__section-one'>
-                                        <div>1</div>
-                                        <div>2</div>
-                                        <div>3</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-wall__wall-figures__section-two'>
-                                        <div>4</div>
-                                        <div>5</div>
-                                        <div>6</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-wall__wall-figures__section-three'>
-                                        <div>7</div>
-                                        <div>8</div>
-                                        <div>9</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                 </div>
                             ) : null
@@ -156,25 +166,25 @@ class OptionBar extends React.Component {
                     {/** ==================== PREMISES BLOCK ==================== */}
                     
                     <div onClick={this.handlePremisesChange} className='wrapper-optionbar__list-premises'>
-                        <div></div>
+                        <div className='wrapper-optionbar__list-premises__photo'></div>
                         <span>Помещения</span>
                     </div>
                         {premises ? (
                                 <div className='wrapper-optionbar__list-premises__premises-figures'>
                                     <section className='wrapper-optionbar__list-premises__premises-figures__section-one'>
-                                        <div>1</div>
-                                        <div>2</div>
-                                        <div>3</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-premises__premises-figures__section-two'>
-                                        <div>4</div>
-                                        <div>5</div>
-                                        <div>6</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-premises__premises-figures__section-three'>
-                                        <div>7</div>
-                                        <div>8</div>
-                                        <div>9</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
+                                        <div>Figure</div>
                                     </section>
                                 </div>
                             ) : null
