@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+//import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 import './RightBar.scss';
 
 class RightBar extends React.Component {
@@ -20,7 +21,7 @@ class RightBar extends React.Component {
     render() {
         return(
             <div className='wrapper-rightbar'>
-                <div className='wrapper-rightbar__more-options'></div>
+                {/*<div className='wrapper-rightbar__more-options'></div>*/}
                 <div className='wrapper-rightbar__arrow-less'></div>
                 <div className='wrapper-rightbar__percent'>100%</div>
                 <div className='wrapper-rightbar__arrow-more'></div>
@@ -28,7 +29,7 @@ class RightBar extends React.Component {
                 <div className='wrapper-rightbar__color-lens'></div>
                 <div className='wrapper-rightbar__wb-sunny'></div>
                 <div className='wrapper-rightbar__save'></div>
-                <div className='wrapper-rightbar__fullscreen'></div>
+                {/*<div className='wrapper-rightbar__fullscreen'></div>*/}
                 <div className='wrapper-rightbar__settings'></div>
             </div>
         )

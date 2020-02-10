@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 //import { Stage, Layer, Rect } from 'react-konva';
 //import konva from 'konva';
 import './Canvas.scss';
@@ -20,7 +21,26 @@ class Canvas extends React.Component {
     }
     render() {
         return(
-            <div className='wrapper-canvas'>canvas</div>
+            <div className='wrapper-canvas'>
+                <TransformWrapper
+                    defaultScale={1}
+                    defaultPositionX={200}
+                    defaultPositionY={100}
+                >
+                    {({zoomIn, zoomOut, resetTransform, ...rest}) => (
+                        <>
+                            {/*<div className="tools">
+                                <button onClick={zoomIn}>+</button>
+                                <button onClick={zoomOut}>-</button>
+                                <button onClick={resetTransform}>x</button>
+                            </div>*/}
+                            <TransformComponent>
+                                <div className='canvas'></div>
+                            </TransformComponent>
+                        </>
+                    )}
+                </TransformWrapper>
+            </div>
         )
     }
 }
