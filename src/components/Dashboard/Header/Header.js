@@ -26,10 +26,10 @@ class Header extends React.Component {
                 </div>
                 {/*<div className='wrapper-header__profile'></div>*/}
                 <div className='wrapper-header__buttons-block'>
-                    <div className='wrapper-header__buttons-block__arrow-back'></div>
+                 {/*<div className='wrapper-header__buttons-block__arrow-back'></div>
                     <div className='wrapper-header__buttons-block__arrow-forward'></div>
                     <div className='wrapper-header__buttons-block__format-paint'></div>
-                    <div className='wrapper-header__buttons-block__layers'></div>
+                    <div className='wrapper-header__buttons-block__layers'></div>*/}
                     <div onClick={this.toggleOptionBar} className='wrapper-header__buttons-block__fullscreen'></div>
                 </div>
             </div>

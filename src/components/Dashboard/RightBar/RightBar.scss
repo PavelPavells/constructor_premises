@@ -7,61 +7,61 @@
     height: 100%;
     z-index: 10000;
 
-    .wrapper-rightbar__more-options {
-        width: 100%;
-        height: 30px;
-        background: url('../../../img/more_vert.svg') no-repeat center;
-        cursor: pointer;
-    }
-    .wrapper-rightbar__arrow-less {
-        width: 100%;
-        height: 30px;
-        background: url('../../../img/expand_less.svg') no-repeat no-repeat center;
-        cursor: pointer;
-    }
-    .wrapper-rightbar__percent {
-        width: 100%;
-        height: 30px;
-        color: $white;
-    }
-    .wrapper-rightbar__arrow-more {
-        width: 100%;
-        height: 30px;
-        background: url('../../../img/expand_more.svg') no-repeat center;
-        cursor: pointer;
-    }
+    // .wrapper-rightbar__more-options {
+    //     width: 30px;
+    //     height: 30px;
+    //     background: url('../../../img/more_vert.svg') no-repeat center;
+    //     cursor: pointer;
+    // }
+    // .wrapper-rightbar__arrow-less {
+    //     width: 30px;
+    //     height: 30px;
+    //     background: url('../../../img/expand_less.svg') no-repeat no-repeat center;
+    //     cursor: pointer;
+    // }
+    // .wrapper-rightbar__percent {
+    //     width: 30px;
+    //     height: 30px;
+    //     color: $white;
+    // }
+    // .wrapper-rightbar__arrow-more {
+    //     width: 30px;
+    //     height: 30px;
+    //     background: url('../../../img/expand_more.svg') no-repeat center;
+    //     cursor: pointer;
+    // }
     .wrapper-rightbar__colorize {
-        width: 100%;
+        width: 35px;
         height: 30px;
         background: url('../../../img/colorize.svg') no-repeat center;
         cursor: pointer;
     }
     .wrapper-rightbar__color-lens {
-        width: 100%;
+        width: 35px;
         height: 30px;
         background: url('../../../img/color_lens.svg') no-repeat center;
         cursor: pointer;
     }
     .wrapper-rightbar__wb-sunny {
-        width: 100%;
+        width: 35px;
         height: 30px;
         background: url('../../../img/wb_sunny.svg') no-repeat center;
         cursor: pointer;
     }
     .wrapper-rightbar__save {
-        width: 100%;
+        width: 35px;
         height: 30px;
         background: url('../../../img/save.svg') no-repeat center;
         cursor: pointer;
     }
     .wrapper-rightbar__fullscreen {
-        width: 100%;
+        width: 35px;
         height: 30px;
         background: url('../../../img/fullscreen.svg') no-repeat center;
         cursor: pointer;
     }
     .wrapper-rightbar__settings {
-        width: 100%;
+        width: 35px;
         height: 30px;
         background: url('../../../img/settings.svg') no-repeat center;
         font-size: 5px;

@@ -21,10 +21,10 @@ class RightBar extends React.Component {
     render() {
         return(
             <div className='wrapper-rightbar'>
-                {/*<div className='wrapper-rightbar__more-options'></div>*/}
+                {/*<div className='wrapper-rightbar__more-options'></div>
                 <div className='wrapper-rightbar__arrow-less'></div>
                 <div className='wrapper-rightbar__percent'>100%</div>
-                <div className='wrapper-rightbar__arrow-more'></div>
+                <div className='wrapper-rightbar__arrow-more'></div>*/}
                 <div className='wrapper-rightbar__colorize'></div>
                 <div className='wrapper-rightbar__color-lens'></div>
                 <div className='wrapper-rightbar__wb-sunny'></div>
