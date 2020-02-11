@@ -6,48 +6,45 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 5px 10px 0 7px;
+    padding: 5px 3px 0 10px;
 
     .wrapper-header__logo {
         width: 180px;
-        padding: 0;
-        margin: 0;
-        padding-top: 6px;
+        margin: 5px 0;
     }
     .wrapper-header__buttons-block {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 30%;
 
-        .wrapper-header__buttons-block__arrow-back {
-            width: 30px;
-            height: 30px;
-            background: url('../../../img/undo.svg') no-repeat center;
-            cursor: pointer;
-        }
-        .wrapper-header__buttons-block__arrow-forward {
-            width: 30px;
-            height: 30px;
-            background: url('../../../img/redo.svg') no-repeat center;
-            cursor: pointer;
-        }
-        .wrapper-header__buttons-block__format-paint {
-            width: 30px;
-            height: 30px;
-            background: url('../../../img/square_foot.svg') no-repeat center;
-            cursor: pointer;
-        }
-        .wrapper-header__buttons-block__layers {
-            width: 30px;
-            height: 30px;
-            background: url('../../../img/layers.svg') no-repeat center;
-            cursor: pointer;
-        }
+        // .wrapper-header__buttons-block__arrow-back {
+        //     width: 30px;
+        //     height: 30px;
+        //     background: url('../../../img/undo.svg') no-repeat center;
+        //     cursor: pointer;
+        // }
+        // .wrapper-header__buttons-block__arrow-forward {
+        //     width: 30px;
+        //     height: 30px;
+        //     background: url('../../../img/redo.svg') no-repeat center;
+        //     cursor: pointer;
+        // }
+        // .wrapper-header__buttons-block__format-paint {
+        //     width: 30px;
+        //     height: 30px;
+        //     background: url('../../../img/square_foot.svg') no-repeat center;
+        //     cursor: pointer;
+        // }
+        // .wrapper-header__buttons-block__layers {
+        //     width: 30px;
+        //     height: 30px;
+        //     background: url('../../../img/layers.svg') no-repeat center;
+        //     cursor: pointer;
+        // }
         .wrapper-header__buttons-block__fullscreen {
             width: 30px;
-            height: 30px;
+            height: 15px;
             background: url('../../../img/fullscreen.svg') no-repeat center;
             cursor: pointer;
         }

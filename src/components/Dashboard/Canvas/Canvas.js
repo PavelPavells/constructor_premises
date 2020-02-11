@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-//import { Stage, Layer, Rect } from 'react-konva';
+import grid from '../../../img/grid.svg';
+//import { Stage, Layer, Rect, Transformer } from 'react-konva';
 //import konva from 'konva';
 import './Canvas.scss';
 
@@ -20,24 +21,32 @@ class Canvas extends React.Component {
         }
     }
     render() {
+        //let width = window.getComputedStyle('canvas').innerWidth;
+        //console.log(width)
         return(
             <div className='wrapper-canvas'>
                 <TransformWrapper
                     defaultScale={1}
-                    defaultPositionX={200}
-                    defaultPositionY={100}
+                    defaultPositionX={100}
+                    defaultPositionY={200}
                 >
                     {({zoomIn, zoomOut, resetTransform, ...rest}) => (
-                        <>
-                            {/*<div className="tools">
-                                <button onClick={zoomIn}>+</button>
-                                <button onClick={zoomOut}>-</button>
-                                <button onClick={resetTransform}>x</button>
-                            </div>*/}
+                        <React.Fragment>
                             <TransformComponent>
-                                <div className='canvas'></div>
+                                <div className='canvas'>
+                                    <img src={grid} alt=''/>
+                                </div>
                             </TransformComponent>
-                        </>
+                            <div className="wrapper-canvas__tools">
+                                <div className='wrapper-canvas__tools__arrow-back'></div>
+                                <div className='wrapper-canvas__tools__arrow-forward'></div>
+                                <div className='wrapper-canvas__tools__format-paint'></div>
+                                <div className='wrapper-canvas__tools__layers'></div>
+                                <div className='wrapper-canvas__tools__button-plus' onClick={zoomIn}></div>
+                                <div className='wrapper-canvas__tools__button-minus' onClick={zoomOut}></div>
+                                <div className='wrapper-canvas__tools__button-reset' onClick={resetTransform}></div>
+                            </div>
+                        </React.Fragment>
                     )}
                 </TransformWrapper>
             </div>
