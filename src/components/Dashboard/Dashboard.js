@@ -1,11 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+
+//MAIN BLOCKS ON DASHBOARD
 import LeftBar from './LeftBar/LeftBar';
 import OptionBar from './OptionBar/OptionBar';
 import Header from './Header/Header';
 import Canvas from './Canvas/Canvas';
 import RightBar from './RightBar/RightBar';
+
+// DATA FOR FIGURES
+import { initialFigures } from '../Dashboard/Figures/initialFigures';
+
+// STYLES FOR DASHBOARD
 import './Dashboard.scss';
 
 class Dashboard extends React.Component {
@@ -18,6 +25,7 @@ class Dashboard extends React.Component {
     }
     render() {
         //const { toggleOptionBar } = this.state;
+        console.log(initialFigures)
         return(
             <div className='wrapper-dashboard'>
                 <header className='wrapper-dashboard__header'>
