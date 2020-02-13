@@ -75,5 +75,53 @@ export const initialFigures = [
         radiusY: 50,
         fill: 'yellow',
         id: 'ellipse2'
+    },
+    {
+        x: 30,
+        y: 30,
+        radius: 70,
+        angle: 60,
+        fill: 'red',
+        stroke: 'black',
+        strokeWidth: 4,
+        rotation: -120,
+        id: 'wedge1'
+    },
+    {
+        x: 30,
+        y: 30,
+        radius: 170,
+        angle: 160,
+        fill: 'green',
+        stroke: 'yellow',
+        strokeWidth: 1,
+        rotation: 120,
+        id: 'wedge2'
+    },
+    {
+        x: 20,
+        y: 50,
+        text: 'HELLO TEXT SOMETHING DOING',
+        fontSize: 18,
+        fontFamily: 'Montserrat',
+        fill: '#555',
+        width: 300,
+        padding: 20,
+        align: 'center',
+        id: 'text1'
+    },
+    {
+        x: 10,
+        y: 30,
+        text: 'HELLO TEXT SOMETHING DOING',
+        fontSize: 14,
+        fontFamily: 'Montserrat',
+        fill: '#555',
+        width: 200,
+        padding: 10,
+        align: 'center'
+    },
+    {
+        
     }
 ]
