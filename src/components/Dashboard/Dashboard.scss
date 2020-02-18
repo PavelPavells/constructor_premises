@@ -48,13 +48,14 @@
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
-                border-right: 1px solid #dfdfdf;
+                //border-right: 1px solid #dfdfdf;
                 height: 93vh;
                 overflow: scroll;
             }
     
             .wrapper-dashboard__canvas {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 flex: 1 0 auto;

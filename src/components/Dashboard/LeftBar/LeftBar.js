@@ -13,11 +13,11 @@ class LeftBar extends React.Component {
         }
     }
     
-    // TOGGLE OPTION BAR
+    /** ************* FUNCTION FOR TOGGLE OPTION BAR ************* */
     toggleOptionBar = event => {
-        event.preventDefault();
-        let toggleOptionBlock = document.getElementsByClassName('wrapper-dashboard__option-left')[0];
-        toggleOptionBlock.classList.toggle('toggle-optionbar')
+       event.preventDefault();
+       let toggleOptionBlock = document.getElementsByClassName('wrapper-dashboard__option-left')[0];
+       toggleOptionBlock.classList.toggle('toggle-optionbar')
     }
     render() {
         return(

@@ -2,30 +2,51 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-//MAIN BLOCKS ON DASHBOARD
+/** ************* IMPORT ACTIONS FROM ACTION FOLDER ************* */
+// import {
+//     toggleColorPicker,
+//     togglePalette,
+//     saveProject,
+//     settings 
+// } from '../../actions/toggleRightFunctions';
+// import { 
+//     toggleArrowBack,
+//     toggleArrowGo,
+//     toggleRules,
+//     toggleLayers
+// } from '../../actions/toggleBottomFunctions';
+
+/** ************* MAIN BLOCKS FOR DASHBOARD ************* */
 import LeftBar from './LeftBar/LeftBar';
 import OptionBar from './OptionBar/OptionBar';
 import Header from './Header/Header';
 import Canvas from './Canvas/Canvas';
+import Rules from './Rules/Rules';
 import RightBar from './RightBar/RightBar';
 
-// DATA FOR FIGURES
-import { initialFigures } from '../Dashboard/Figures/initialFigures';
+/** ************* DATA FOR FIGURES ************* */
+//import { initialFigures } from '../Dashboard/Figures/initialFigures';
+//import Square from './Figures/Rect';
 
-// STYLES FOR DASHBOARD
+/** ************* DASHBOARD STYLES ************* */
 import './Dashboard.scss';
 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            some: false,
+            toggleRules: false,
             toggleOptionBar: true
         }
     }
+    handleToggleRules = event => {
+        event.preventDefault();
+        this.setState({ some: !this.state.some });
+    }
     render() {
-        //const { toggleOptionBar } = this.state;
-        console.log(initialFigures)
+        //console.log(this.props)
+        //const { toggleBottom, toggleRight } = this.props;
+        //console.log(initialFigures)
         return(
             <div className='wrapper-dashboard'>
                 <header className='wrapper-dashboard__header'>
@@ -40,6 +61,7 @@ class Dashboard extends React.Component {
                             <OptionBar />
                         </nav>            
                         <section className='wrapper-dashboard__canvas'>
+                            <Rules />
                             <Canvas />
                         </section>
                         <nav className='wrapper-dashboard__navigation-right'>
@@ -52,12 +74,24 @@ class Dashboard extends React.Component {
     }
 }
 Dashboard.propTypes = {
-    dashboard: PropTypes.array,
+    toggleBottom: PropTypes.object,
+    toggleRight: PropTypes.object,
     errors: PropTypes.object
 }
 const mapStateToProps = state => ({
-    dashboard: state.dashboard
+    toggleBottom: state.toggleBottom,
+    toggleRight: state.toggleRight
 })
+//const mapDispatchToProps = {
+//     toggleColorPicker,
+//     togglePalette,
+//     saveProject,
+//     settings,
+//     toggleArrowBack,
+//     toggleArrowGo,
+//     toggleRules,
+//     toggleLayers
+//}
 export default connect(
     mapStateToProps,
     null
