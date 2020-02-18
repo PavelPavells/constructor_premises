@@ -1,37 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+
+/** ************* IMPORT ZOOM LIBRARY ************* */
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-import grid from '../../../img/grid.svg';
+
+/** ************* IMPORT KONVA LIBRARY ************* */
+//import Square from '../Figures/Rect';
 //import { Stage, Layer, Rect, Transformer } from 'react-konva';
 //import konva from 'konva';
-import './Canvas.scss';
 
-// GLOBAL VARIABLE
-//const WIDTH = 20;
-//const HEIGHT = 20;
-//const grid = [['white', 'white'], ['white', 'white']];
+/** ************* MAIN BLOCKS ON DASHBOARD ************* */
+//import Rule from '../Rules/Rules';
+
+/** ************* IMPORT STYLES FOR CANVAS ************* */
+import './Canvas.scss';
+import grid from '../../../img/grid.svg';
 
 class Canvas extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            some: false,
+            some: true,
             errors: {}
         }
     }
+    handleChangeRule = event => {
+        event.preventDefault();
+        //this.setState({ some: !this.state.some })
+    }
     render() {
-        //let width = window.getComputedStyle('canvas').innerWidth;
-        //console.log(width)
+        console.log(this.props)
         return(
             <div className='wrapper-canvas'>
                 <TransformWrapper
                     defaultScale={1}
-                    defaultPositionX={100}
-                    defaultPositionY={200}
+                    defaultPositionX={0}
+                    defaultPositionY={0}
                 >
-                    {({zoomIn, zoomOut, resetTransform, ...rest}) => (
+                    {({handleChangeRule, zoomIn, zoomOut, resetTransform, ...rest}) => (
+                        //console.log(rest)
                         <React.Fragment>
+                            {/*<div onClick={handleChangeRule}>{some ? <Rule /> : null}</div>*/}
                             <TransformComponent>
                                 <div className='canvas'>
                                     <img src={grid} alt=''/>
@@ -40,7 +50,7 @@ class Canvas extends React.Component {
                             <div className="wrapper-canvas__tools">
                                 <div className='wrapper-canvas__tools__arrow-back'></div>
                                 <div className='wrapper-canvas__tools__arrow-forward'></div>
-                                <div className='wrapper-canvas__tools__format-paint'></div>
+                                <div className='wrapper-canvas__tools__format-paint' onClick={handleChangeRule}></div>
                                 <div className='wrapper-canvas__tools__layers'></div>
                                 <div className='wrapper-canvas__tools__button-plus' onClick={zoomIn}></div>
                                 <div className='wrapper-canvas__tools__button-minus' onClick={zoomOut}></div>

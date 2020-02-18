@@ -14,30 +14,40 @@ class OptionBar extends React.Component {
             premises: false
         }
     }
+
+    /** ********** TOGGLE TURNSTILE OPTION ********** */
     handleTurnstileChange = event => {
         event.preventDefault();
         let arrowTurnstile = document.getElementsByClassName('wrapper-optionbar__list-turnstile__photo')[0];
         arrowTurnstile.classList.toggle('transform-photo');
         this.setState({ turnstile: !this.state.turnstile });
     }
+
+    /** ********** TOGGLE BARRIER OPTION ********** */
     handleBarrierChange = event => {
         event.preventDefault();
         let arrowBarrier = document.getElementsByClassName('wrapper-optionbar__list-barrier__photo')[0];
         arrowBarrier.classList.toggle('transform-photo');
         this.setState({ barrier: !this.state.barrier });
     }
+
+    /** ********** TOGGLE ANADROMOUS OPTION ********** */
     handleAnadromousChange = event => {
         event.preventDefault();
         let arrowAnadromous = document.getElementsByClassName('wrapper-optionbar__list-anadromous__photo')[0];
         arrowAnadromous.classList.toggle('transform-photo');
         this.setState({ anadromous: !this.state.anadromous });
     }
+
+    /** ********** TOGGLE WALL OPTION ********** */
     handleWallChange = event => {
         event.preventDefault();
         let arrowWall = document.getElementsByClassName('wrapper-optionbar__list-wall__photo')[0];
         arrowWall.classList.toggle('transform-photo');
         this.setState({ wall: !this.state.wall });
     }
+
+    /** ********** TOGGLE PREMISES OPTION ********** */
     handlePremisesChange = event => {
         event.preventDefault();
         let arrowPremises = document.getElementsByClassName('wrapper-optionbar__list-premises__photo')[0];
@@ -55,7 +65,7 @@ class OptionBar extends React.Component {
                         <div className='wrapper-optionbar__list-text__bold'></div>
                     </div>
 
-                    {/** ==================== TURNSTILE BLOCK ==================== */}
+                    {/** ********** TURNSTILE BLOCK ********** */}
 
                     <div onClick={this.handleTurnstileChange} className='wrapper-optionbar__list-turnstile'>
                         <div className='wrapper-optionbar__list-turnstile__photo'></div>
@@ -200,7 +210,4 @@ class OptionBar extends React.Component {
 OptionBar.propTypes = {
     some: PropTypes.bool
 }
-const mapStateToProps = state => ({
-    some: state.some
-})
-export default connect(mapStateToProps, null)(OptionBar)
+export default connect(null, null)(OptionBar)

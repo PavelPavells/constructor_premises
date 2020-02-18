@@ -1,0 +1,77 @@
+@import '../../../styles/base.scss';
+.wrapper-rule {
+    font-weight: 100;
+    width: 97%;
+    height: 1px;
+}
+
+// ========== LIBRARY RULES STYLES ========== //
+
+.react-ruler-wrapper .ruler-container {
+    margin-top: 53px;
+}
+.react-ruler-wrapper .ruler-list {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid $grey;
+}
+.react-ruler-wrapper .ruler-list .line {
+    height: 10px;
+    border-left: 1px solid $grey;
+}
+.react-ruler-wrapper .ruler-list .rule-mark .line-text {
+    position: absolute;
+    top: -22px;
+    margin-left: -4px;
+    font-size: 13px;
+    color: $grey;
+}
+.react-ruler-wrapper .ruler-list .rule-mark .line {
+    border-left: 1px solid $grey;
+    height: 20px;
+}
+.react-ruler-wrapper .ruler-drag .ruler-point {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    color: $grey;
+}
+.react-ruler-wrapper .ruler-drag .ruler-point .point {
+    position: absolute;
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: $grey;
+    color: $white;
+    margin-bottom: 5px;
+    line-height: 24px;
+    height: 30px;
+    min-width: 48px;
+    border-radius: 4px;
+    top: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+.react-ruler-wrapper .ruler-drag .ruler-point .ruler-line {
+    width: 2px;
+    height: 38px;
+    background-color: $grey;
+    cursor: pointer;
+    margin-top: 29px;
+}
+.react-ruler-wrapper .ruler-drag .ruler-point .point:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: $grey transparent transparent transparent;
+    line-height: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
