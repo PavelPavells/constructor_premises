@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+//import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Ruler from 'rc-ruler-slider/dist';
 import 'rc-ruler-slider/dist/index.css';
@@ -8,54 +8,44 @@ import './Rules.scss';
 class Rule extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            some: true,
-            errors: {}
-        }
+        this.state = {}
     }
+
+    /** ************* DRAG CHANGE ************* */
     handleDragChange = value => {
         console.log(value);
     }
+
+    /** ************* DRAG END ************* */
     handleDragEnd = value => {
         console.log(value);
     }
+
+    /** ************* DRAG START ************* */
     handleDragStart = value => {
         console.log(value);
     }
+
+    /** ************* RENDER VALUE ************* */
     handleRenderValue = value => {
         return `${value}`;
     }
-    //handleChangeRule = event => {
-        //event.preventDefault();
-        //this.setState({ some: !this.state.some })
-    //}
     render() {
-        const { some } = this.state;
         return (
-            <div onClick={this.handleChangeRule} className='wrapper-rule'>
-                {some ? 
-                    <Ruler 
-                        startValue={50}
-                        onDrag={this.handleDragChange}
-                        onDragEnd={this.handleDragEnd}
-                        onDragStart={this.handleDragStart}
-                        renderValue={this.handleRenderValue}
-                        start={0}
-                        end={100}
-                        step={1}
-                        className='wrapper-rule__styles'
-                    /> 
-                : null}
+            <div className='wrapper-rule'>
+                <Ruler 
+                    startValue={50}
+                    onDrag={this.handleDragChange}
+                    onDragEnd={this.handleDragEnd}
+                    onDragStart={this.handleDragStart}
+                    renderValue={this.handleRenderValue}
+                    start={0}
+                    end={100}
+                    step={1}
+                    className='wrapper-rule__styles'
+                /> 
             </div>
         )
     }
 }
-Rule.propTypes = {
-    some: propTypes.bool,
-    errors: propTypes.object
-}
-const mapStateToProps = state => ({
-    some: state.some,
-    errors: state.errors
-})
-export default connect(mapStateToProps, null)(Rule)
+export default connect(null, null)(Rule)

@@ -2,19 +2,19 @@ import React from "react";
 //import PropTypes from 'prop-types';
 //import { connect } from 'react-redux';
 import { ChromePicker } from "react-color";
-import "./ColorPicker.scss";
+import "./Pallette.scss";
 
-class ColorPicker extends React.Component {
+class Pallette extends React.Component {
   state = {
     displayColorPicker: false
   };
 
-  /** ************* TOGGLE COLOR PICKER ************* */
+  /** ************* TOGGLE PALLETTE WINDOW ************* */
   handleClick = () => {
     this.setState({ displayColorPicker: !this.state.displayColorPicker });
   };
 
-  /** ************* TOGGLE COLOR PICKER WINDOW ************* */
+  /** ************* TOGGLE PALLETTE WINDOW ************* */
   handleClose = () => {
     this.setState({ displayColorPicker: false });
   };
@@ -34,7 +34,7 @@ class ColorPicker extends React.Component {
     };
     return (
       <div>
-        <div className='wrapper-colorpicker' onClick={this.handleClick}></div>
+        <div className='wrapper-pallette' onClick={this.handleClick}></div>
         {this.state.displayColorPicker ? (
           <div style={popover}>
             <div style={cover} onClick={this.handleClose} />
@@ -46,4 +46,4 @@ class ColorPicker extends React.Component {
   }
 }
 
-export default ColorPicker;
+export default Pallette;

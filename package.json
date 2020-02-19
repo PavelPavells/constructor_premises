@@ -13,6 +13,7 @@
     "path-ast": "^1.1.0",
     "rc-ruler-slider": "^1.1.2",
     "react": "^16.12.0",
+    "react-color": "^2.18.0",
     "react-dom": "^16.12.0",
     "react-konva": "^16.12.0-0",
     "react-map-interaction": "^1.3.2",

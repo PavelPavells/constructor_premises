@@ -16,9 +16,13 @@ class Login extends React.Component {
       }
     };
   }
+
+  /** ************* CHANGE INPUT ************* */
   onChange = event => {
     this.setState({ [event.target.id]: event.target.value });
   };
+
+  /** ************* SUBMIT FORM ************* */
   onSubmit = event => {
     event.preventDefault();
     const { email, password } = this.state;
@@ -147,8 +151,8 @@ class Login extends React.Component {
   }
 }
 Login.propTypes = {
-  login: PropTypes.func.isRequired,
-  errors: PropTypes.object.isRequired
+  login: PropTypes.object,
+  errors: PropTypes.object
 };
 const mapStateToProps = state => ({
   login: state.login,

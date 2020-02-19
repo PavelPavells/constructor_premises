@@ -10,9 +10,7 @@ import './App.scss';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      something: false
-    }
+    this.state = {}
   }
   render() {
     return (
