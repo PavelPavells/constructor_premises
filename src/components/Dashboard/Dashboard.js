@@ -34,19 +34,11 @@ import './Dashboard.scss';
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            toggleRules: false,
-            toggleOptionBar: true
-        }
-    }
-    handleToggleRules = event => {
-        event.preventDefault();
-        this.setState({ some: !this.state.some });
+        this.state = {}
     }
     render() {
         //console.log(this.props)
-        //const { toggleBottom, toggleRight } = this.props;
-        //console.log(initialFigures)
+        const { toggleRules } = this.props.toggleBottom
         return(
             <div className='wrapper-dashboard'>
                 <header className='wrapper-dashboard__header'>
@@ -61,7 +53,7 @@ class Dashboard extends React.Component {
                             <OptionBar />
                         </nav>            
                         <section className='wrapper-dashboard__canvas'>
-                            <Rules />
+                            {toggleRules ? <Rules /> : null}
                             <Canvas />
                         </section>
                         <nav className='wrapper-dashboard__navigation-right'>

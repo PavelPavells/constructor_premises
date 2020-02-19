@@ -1,0 +1,17 @@
+@import '../../../styles/base.scss';
+// .wrapper-colorpicker {
+//     display: block;
+//     position: relative;
+//     //width: 100px;
+//     //height: 100px;
+//     top: 5vh;
+//     right: 225px;
+// }
+.wrapper-colorpicker  {
+    display: block;
+    width: 35px;
+    height: 30px;
+    background: url('../../../img/colorize.svg') no-repeat center;
+    cursor: pointer;
+    z-index: 2000;
+}

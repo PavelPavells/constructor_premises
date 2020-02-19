@@ -1,0 +1,9 @@
+@import '../../../styles/base.scss';
+.wrapper-pallette {
+    display: block;
+    width: 35px;
+    height: 30px;
+    background: url('../../../img/color_lens.svg') no-repeat center;
+    cursor: pointer;
+    z-index: 2000;
+}

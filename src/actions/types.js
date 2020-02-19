@@ -1,6 +1,11 @@
 // ********** AUTHENTICATION ********** //
 export const SET_CURRENT_USER    = 'SET_CURRENT_USER';
 
+// ********** FETCH DATA ********** //
+export const FETCH_DATA_BEGIN    = 'FETCH_DATA_BEGIN';
+export const FETCH_DATA_SUCCESS  = 'FETCH_DATA_SUCCESS';
+export const FETCH_DATA_FAILURE  = 'FETCH_DATA_FAILURE';
+
 // ********** DASHBOARD ********** //
 export const CREATE_PREMISES     = 'CREATE_PREMISES';
 export const UPDATE_PREMISES     = 'UPDATE_PREMISES';

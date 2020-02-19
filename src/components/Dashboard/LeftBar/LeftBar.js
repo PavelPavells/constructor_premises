@@ -8,9 +8,7 @@ import './LeftBar.scss';
 class LeftBar extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            some: false
-        }
+        this.state = {}
     }
     
     /** ************* FUNCTION FOR TOGGLE OPTION BAR ************* */

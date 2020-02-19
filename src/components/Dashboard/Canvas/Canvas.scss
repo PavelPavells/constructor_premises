@@ -81,23 +81,28 @@
         }
     }
     .canvas {
-        position: relative;
+        //position: relative;
         width: 100%;
         height: 100%;
         overflow: hidden;
 
         & > img {
-            width: 100%;
-            height: 100%;
+            width: 300%;
+            height: 300%;
         }
     }
+}
+.canvas-figures {
+    display: block;
+    font-size: 20px;
+    border: 5px dotted red;
 }
 
 // STYLES FOR TRANSFORM COMPONENT
 
 .TransformComponent-module_content__TZU5O {
-    width: 500%;
-    height: 500%;
+    width: 100%;
+    height: 100%;
 }
 .TransformComponent-module_container__3NwNd {
     width: 100%;

@@ -7,10 +7,7 @@ import './Header.scss';
 class Header extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            some: false,
-            errors: {}
-        }
+        this.state = {}
     }
 
     /** ************* FUNCTION FOR FULLSCREEN OPTION ************* */

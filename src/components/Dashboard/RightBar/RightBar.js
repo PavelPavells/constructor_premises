@@ -10,6 +10,10 @@ import {
     settings 
 } from '../../../actions/toggleRightFunctions';
 
+/** ************* IMPORT COMPONENTS ************* */
+import ColorPicker from '../ColorPicker/ColorPicker';
+import Pallette from '../Pallette/Pallette';
+
 /** ************* RIGHTBAR STYLES ************* */
 import './RightBar.scss';
 
@@ -27,19 +31,19 @@ class RightBar extends React.Component {
 
     /** ************* TOGGLE SAVE PROJECT BLOCK ************* */
     handleChangeSaveProject = project => {
-        // let projects = {
-        //     '1': '1',
-        //     '2': '2',
-        //     '3': '3',
-        //     '4': '4',
-        //     '5': '5',
-        //     '6': '6',
-        //     '7': '7',
-        //     '8': '8',
-        //     '9': '9',
-        //     '10': '10'
-        // }
-        this.props.saveProject();   //projects (list of projects)
+        let projects = {
+            '1': '1',
+            '2': '2',
+            '3': '3',
+            '4': '4',
+            '5': '5',
+            '6': '6',
+            '7': '7',
+            '8': '8',
+            '9': '9',
+            '10': '10'
+        }
+        this.props.saveProject(projects);   //projects (list of projects)
     }
 
     /** ************* TOGGLE SETTINGS BLOCK ************* */
@@ -47,15 +51,20 @@ class RightBar extends React.Component {
         this.props.settings();
     }
     render() {
-        console.log(this.props);
+        //console.log(this.props.toggleRight.toggleColorPicker);
+        //const { toggleColorPicker } = this.props.toggleRight
         return(
             <div className='wrapper-rightbar'>
                 {/*<div className='wrapper-rightbar__more-options'></div>
                 <div className='wrapper-rightbar__arrow-less'></div>
                 <div className='wrapper-rightbar__percent'>100%</div>
                 <div className='wrapper-rightbar__arrow-more'></div>*/}
-                <div onClick={this.handleChangeTogglePicker} className='wrapper-rightbar__colorize'></div>
-                <div onClick={this.handleChangeTogglePallette} className='wrapper-rightbar__color-lens'></div>
+                <div onClick={this.handleChangeTogglePicker} className='wrapper-rightbar__colorize'>
+                    <ColorPicker /> 
+                </div>
+                <div onClick={this.handleChangeTogglePallette} className='wrapper-rightbar__color-lens'>
+                    <Pallette /> 
+                </div>
                 <div className='wrapper-rightbar__wb-sunny'></div>
                 <div onClick={this.handleChangeSaveProject} className='wrapper-rightbar__save'></div>
                 {/*<div className='wrapper-rightbar__fullscreen'></div>*/}

@@ -15,9 +15,13 @@ class Register extends React.Component {
             errors: {}
         }
     }
+
+    /** ************* CHANGE INPUT ************* */
     onChange = event => {
         this.setState({ [event.target.id]: event.target.value });
     }
+
+    /** ************* SUBMIT FORM ************* */
     onSubmit = event => {
         event.preventDefault();
         const { email, password, name, company_name, person_name, errors } = this.state;
