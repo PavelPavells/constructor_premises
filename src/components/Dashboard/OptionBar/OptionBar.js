@@ -74,19 +74,16 @@ class OptionBar extends React.Component {
                         {turnstile ? (
                                 <div className='wrapper-optionbar__list-turnstile__turnstile-figures'>
                                     <section className='wrapper-optionbar__list-turnstile__turnstile-figures__section-one'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='photo-top__left'><div className='photo'></div></div>
+                                        <div className='photo-top__right'><div className='photo'></div></div>
                                     </section>
                                     <section className='wrapper-optionbar__list-turnstile__turnstile-figures__section-two'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='photo-center__left'><div className='photo'></div></div>
+                                        <div className='photo-center__right'><div className='photo'></div></div>
                                     </section>
                                     <section className='wrapper-optionbar__list-turnstile__turnstile-figures__section-three'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='photo-bottom__left'><div className='photo'></div></div>
+                                        <div className='photo-bottom__right'><div className='photo'></div></div>
                                     </section>
                                 </div>
                             ) : null
@@ -103,15 +100,12 @@ class OptionBar extends React.Component {
                                     <section className='wrapper-optionbar__list-barrier__barrier-figures__section-one'>
                                         <div>Figure</div>
                                         <div>Figure</div>
-                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-barrier__barrier-figures__section-two'>
                                         <div>Figure</div>
                                         <div>Figure</div>
-                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-barrier__barrier-figures__section-three'>
-                                        <div>Figure</div>
                                         <div>Figure</div>
                                         <div>Figure</div>
                                     </section>
@@ -130,15 +124,12 @@ class OptionBar extends React.Component {
                                     <section className='wrapper-optionbar__list-anadromous__anadromous-figures__section-one'>
                                         <div>Figure</div>
                                         <div>Figure</div>
-                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-anadromous__anadromous-figures__section-two'>
                                         <div>Figure</div>
                                         <div>Figure</div>
-                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-anadromous__anadromous-figures__section-three'>
-                                        <div>Figure</div>
                                         <div>Figure</div>
                                         <div>Figure</div>
                                     </section>
@@ -157,15 +148,12 @@ class OptionBar extends React.Component {
                                     <section className='wrapper-optionbar__list-wall__wall-figures__section-one'>
                                         <div>Figure</div>
                                         <div>Figure</div>
-                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-wall__wall-figures__section-two'>
                                         <div>Figure</div>
                                         <div>Figure</div>
-                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-wall__wall-figures__section-three'>
-                                        <div>Figure</div>
                                         <div>Figure</div>
                                         <div>Figure</div>
                                     </section>
@@ -184,15 +172,12 @@ class OptionBar extends React.Component {
                                     <section className='wrapper-optionbar__list-premises__premises-figures__section-one'>
                                         <div>Figure</div>
                                         <div>Figure</div>
-                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-premises__premises-figures__section-two'>
                                         <div>Figure</div>
                                         <div>Figure</div>
-                                        <div>Figure</div>
                                     </section>
                                     <section className='wrapper-optionbar__list-premises__premises-figures__section-three'>
-                                        <div>Figure</div>
                                         <div>Figure</div>
                                         <div>Figure</div>
                                     </section>
