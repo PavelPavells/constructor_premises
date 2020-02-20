@@ -14,10 +14,16 @@ import {
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
 /** ************* IMPORT KONVA LIBRARY ************* */
-import { Stage, Layer, Text, Rect, Circle } from 'react-konva';   /** RECT, TRANSFORMER */
+import { Stage, Layer } from 'react-konva';   /** RECT, TRANSFORMER */
 
 /** ************* MAIN BLOCKS ON DASHBOARD ************* */
-//import Square from '../Figures/Rect';
+import Rect from '../Figures/Rect';
+import Arrow from '../Figures/Arrow';
+import Circle from '../Figures/Circle';
+import Image from '../Figures/Image';
+import Line from '../Figures/Line';
+import Text from '../Figures/Text';
+
 
 /** ************* IMPORT STYLES FOR CANVAS ************* */
 import './Canvas.scss';
@@ -52,72 +58,14 @@ class Canvas extends React.Component {
         return(
             <div className='wrapper-canvas'>
                 <div style={{'display': 'block', 'position': 'absolute', 'z-index': '1000'}}>
-                    <Stage width={1130} height={600}>
+                    <Stage width={1050} height={550}>
                         <Layer>
-                            <Text
-                                text="DRAGGABLE"
-                                x={this.state.x}
-                                y={this.state.y}
-                                fontSize={30}
-                                strokeWidth={4}
-                                draggable
-                                fill={this.state.isDragging ? '#404040' : 'black'}
-                                onDragStart={() => {
-                                this.setState({
-                                    isDragging: true
-                                });
-                                }}
-                                onDragEnd={e => {
-                                this.setState({
-                                    isDragging: false,
-                                    x: e.target.x(),
-                                    y: e.target.y()
-                                });
-                                }}
-                            />
-                            <Rect 
-                                x={250}
-                                y={250}
-                                width={150}
-                                height={150}
-                                fill={'#404040'}
-                                stroke='black'
-                                strokeWidth={4}
-                                draggable
-                                onDragStart={() => {
-                                this.setState({
-                                    isDragging: true
-                                });
-                                }}
-                                onDragEnd={e => {
-                                this.setState({
-                                    isDragging: false,
-                                    xrect: e.target.x(),
-                                    yrect: e.target.y()
-                                });
-                                }}
-                            />
-                            <Circle 
-                                x={this.state.xcircle}
-                                y={this.state.ycircle}
-                                radius={70}
-                                fill={'#404040'}
-                                stroke={'black'}
-                                strokeWidth={4}
-                                draggable
-                                onDragStart={() => {
-                                this.setState({
-                                    isDragging: true
-                                });
-                                }}
-                                onDragEnd={e => {
-                                this.setState({
-                                    isDragging: false,
-                                    xcircle: e.target.x(),
-                                    ycircle: e.target.y()
-                                });
-                                }}
-                            />
+                            <Rect />
+                            <Arrow />
+                            <Circle />
+                            <Line />
+                            {/*<Image />*/}
+                            <Text />
                         </Layer>
                     </Stage>
                 </div>
@@ -128,11 +76,9 @@ class Canvas extends React.Component {
                 >
                     {({ zoomIn, zoomOut, resetTransform, ...rest}) => (
                         <React.Fragment>
-                            {/*<div onClick={handleChangeRule}>{some ? <Rule /> : null}</div>*/}
                             <TransformComponent>
                                 <div className='canvas'>
                                     <img src={grid} alt=''/>
-                                    
                                 </div>
                             </TransformComponent>
                             <div className="wrapper-canvas__tools">

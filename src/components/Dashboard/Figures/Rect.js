@@ -1,69 +1,117 @@
 import React from 'react';
-//import Konva from 'konva';
-import { Rect, Transformer } from 'react-konva';
 
+/** ************* IMPORT KONVA LIBRARY ************* */
+import { Rect } from 'react-konva';
 
-const Square = ({ shapeProps, isSelected, onSelect, onChange }) => {
-    const shapeRef = React.useRef();
-    const trRef = React.useRef();
-  
-    React.useEffect(() => {
-      if (isSelected) {
-        // we need to attach transformer manually
-        trRef.current.setNode(shapeRef.current);
-        trRef.current.getLayer().batchDraw();
+/** ************* RECT FIGURE ************* */
+class Rects extends React.Component {
+    constructor(props) {
+      super(props)
+      this.state = {
+        isDragging: false,
+        x: 300,
+        y: 200
       }
-    }, [isSelected]);
-  
-    return (
-      <React.Fragment>
-        <Rect
-          onClick={onSelect}
-          ref={shapeRef}
-          {...shapeProps}
-          draggable
-          onDragEnd={e => {
-            onChange({
-              ...shapeProps,
-              x: e.target.x(),
-              y: e.target.y()
-            });
-          }}
-          onTransformEnd={e => {
-            // transformer is changing scale of the node
-            // and NOT its width or height
-            // but in the store we have only width and height
-            // to match the data better we will reset scale on transform end
-            const node = shapeRef.current;
-            const scaleX = node.scaleX();
-            const scaleY = node.scaleY();
-  
-            // we will reset it back
-            node.scaleX(1);
-            node.scaleY(1);
-            onChange({
-              ...shapeProps,
-              x: node.x(),
-              y: node.y(),
-              // set minimal value
-              width: Math.max(5, node.width() * scaleX),
-              height: Math.max(node.height() * scaleY)
-            });
-          }}
+    }
+    render() {
+      const { isDragging, x, y } = this.state;
+      return(
+        <Rect 
+			x={x}
+			y={y}
+			width={150}
+			height={150}
+			fill={isDragging ? '#DC2222' : '#404040'}
+			draggable
+			onDragStart={() => {
+				this.setState({ isDragging: true })
+			}}
+			onDragEnd={event => {
+				this.setState({
+					isDragging: false,
+					x: event.target.x(),
+					y: event.target.y()
+				})
+			}}
         />
-        {isSelected && (
-          <Transformer
-            ref={trRef}
-            boundBoxFunc={(oldBox, newBox) => {
-              // limit resize
-              if (newBox.width < 5 || newBox.height < 5) {
-                return oldBox;
-              }
-              return newBox;
-            }}
-          />
-        )}
-      </React.Fragment>
-    );
-  };
-export default Square;
+      )
+    }
+}
+export default Rects;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const Square = ({ shapeProps, isSelected, onSelect, onChange }) => {
+//     const shapeRef = React.useRef();
+//     const trRef = React.useRef();
+  
+//     React.useEffect(() => {
+//       if (isSelected) {
+//         // we need to attach transformer manually
+//         trRef.current.setNode(shapeRef.current);
+//         trRef.current.getLayer().batchDraw();
+//       }
+//     }, [isSelected]);
+  
+//     return (
+//       <React.Fragment>
+//         <Rect
+//           onClick={onSelect}
+//           ref={shapeRef}
+//           {...shapeProps}
+//           draggable
+//           onDragEnd={e => {
+//             onChange({
+//               ...shapeProps,
+//               x: e.target.x(),
+//               y: e.target.y()
+//             });
+//           }}
+//           onTransformEnd={e => {
+//             // transformer is changing scale of the node
+//             // and NOT its width or height
+//             // but in the store we have only width and height
+//             // to match the data better we will reset scale on transform end
+//             const node = shapeRef.current;
+//             const scaleX = node.scaleX();
+//             const scaleY = node.scaleY();
+  
+//             // we will reset it back
+//             node.scaleX(1);
+//             node.scaleY(1);
+//             onChange({
+//               ...shapeProps,
+//               x: node.x(),
+//               y: node.y(),
+//               // set minimal value
+//               width: Math.max(5, node.width() * scaleX),
+//               height: Math.max(node.height() * scaleY)
+//             });
+//           }}
+//         />
+//         {isSelected && (
+//           <Transformer
+//             ref={trRef}
+//             boundBoxFunc={(oldBox, newBox) => {
+//               // limit resize
+//               if (newBox.width < 5 || newBox.height < 5) {
+//                 return oldBox;
+//               }
+//               return newBox;
+//             }}
+//           />
+//         )}
+//       </React.Fragment>
+//     );
+//   };
+// export default Square;
