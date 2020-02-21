@@ -52,7 +52,7 @@ class Login extends React.Component {
   };
   render() {
     const { email, password, errors } = this.state;
-    if (email && password) {
+    if (email === '123@123' && password === '123') {
       return (
         <div className="wrapper-login">
           <header className="header-description">
