@@ -17,12 +17,13 @@ import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 import { Stage, Layer } from 'react-konva';   /** RECT, TRANSFORMER */
 
 /** ************* MAIN BLOCKS ON DASHBOARD ************* */
-import Rect from '../Figures/Rect';
+//import Rect from '../Figures/Rect';
 //import Arrow from '../Figures/Arrow';
-import Circle from '../Figures/Circle';
-import { Images1, Images2, Images3 } from '../Figures/Image';
+//import Circle from '../Figures/Circle';
 //import Line from '../Figures/Line';
+//import Triange from '../Figures/Triangle';
 import Text from '../Figures/Text';
+import { Images1, Images2, Images3 } from '../Figures/Image';
 
 
 /** ************* IMPORT STYLES FOR CANVAS ************* */
