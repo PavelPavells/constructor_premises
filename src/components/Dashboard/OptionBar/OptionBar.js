@@ -1,61 +1,68 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+
+/** ************* IMPORT ACTIONS FROM ACTION FOLDER ************* */
+ import {
+    toggleTurnstilleBlock,
+    toggleRoomBlock,
+    toggleAnadromousBlock,
+    toggleWallBlock,
+    toggleFencingBlock 
+} from '../../../actions/toggleOptionFunctions';
+
+/** ************* IMPORT STYLES FOR OPTIONBAR ************* */
 import './OptionBar.scss';
 
 class OptionBar extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            turnstile: false,
-            barrier: false,
-            anadromous: false,
-            wall: false,
-            premises: false
-        }
+        this.state = {}
     }
 
-    /** ********** TOGGLE TURNSTILE OPTION ********** */
-    handleTurnstileChange = event => {
-        event.preventDefault();
+    /** ********** TOGGLE TURNSTILLE OPTION ********** */
+    handleTurnstileChange = () => {
         let arrowTurnstile = document.getElementsByClassName('wrapper-optionbar__list-turnstile__photo')[0];
         arrowTurnstile.classList.toggle('transform-photo');
-        this.setState({ turnstile: !this.state.turnstile });
+        this.props.toggleTurnstilleBlock();
     }
 
-    /** ********** TOGGLE BARRIER OPTION ********** */
-    handleBarrierChange = event => {
-        event.preventDefault();
+    /** ********** TOGGLE ROOM OPTION ********** */
+    handleBarrierChange = () => {
         let arrowBarrier = document.getElementsByClassName('wrapper-optionbar__list-barrier__photo')[0];
         arrowBarrier.classList.toggle('transform-photo');
-        this.setState({ barrier: !this.state.barrier });
+        this.props.toggleRoomBlock();
     }
 
     /** ********** TOGGLE ANADROMOUS OPTION ********** */
-    handleAnadromousChange = event => {
-        event.preventDefault();
+    handleAnadromousChange = () => {
         let arrowAnadromous = document.getElementsByClassName('wrapper-optionbar__list-anadromous__photo')[0];
         arrowAnadromous.classList.toggle('transform-photo');
-        this.setState({ anadromous: !this.state.anadromous });
+        this.props.toggleAnadromousBlock();
     }
 
     /** ********** TOGGLE WALL OPTION ********** */
-    handleWallChange = event => {
-        event.preventDefault();
+    handleWallChange = () => {
         let arrowWall = document.getElementsByClassName('wrapper-optionbar__list-wall__photo')[0];
         arrowWall.classList.toggle('transform-photo');
-        this.setState({ wall: !this.state.wall });
+        this.props.toggleWallBlock();
     }
 
-    /** ********** TOGGLE PREMISES OPTION ********** */
-    handlePremisesChange = event => {
-        event.preventDefault();
+    /** ********** TOGGLE FENCING OPTION ********** */
+    handlePremisesChange = () => {
         let arrowPremises = document.getElementsByClassName('wrapper-optionbar__list-premises__photo')[0];
         arrowPremises.classList.toggle('transform-photo');
-        this.setState({ premises: !this.state.premises });
+        this.props.toggleFencingBlock();
     }
     render() {
-        const { turnstile, barrier, anadromous, wall, premises } = this.state;
+        //console.log(this.props);
+        const { 
+            toggleTurnstilleBlock, 
+            toggleRoomBlock, 
+            toggleAnadromousBlock, 
+            toggleWallBlock, 
+            toggleFencingBlock 
+        } = this.props.toggleOption;
         return(
             <div className='wrapper-optionbar'>
                 <div className='wrapper-optionbar__list'>
@@ -71,43 +78,43 @@ class OptionBar extends React.Component {
                         <div className='wrapper-optionbar__list-turnstile__photo'></div>
                         <span>Турникеты</span>
                     </div>
-                        {turnstile ? (
+                        {toggleTurnstilleBlock ? (
                                 <div className='wrapper-optionbar__list-turnstile__turnstile-figures'>
                                     <section className='wrapper-optionbar__list-turnstile__turnstile-figures__section-one'>
-                                        <div className='photo-top__left'><div className='photo'></div></div>
-                                        <div className='photo-top__right'><div className='photo'></div></div>
+                                        <div className='section-one__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-one__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                     <section className='wrapper-optionbar__list-turnstile__turnstile-figures__section-two'>
-                                        <div className='photo-center__left'><div className='photo'></div></div>
-                                        <div className='photo-center__right'><div className='photo'></div></div>
+                                        <div className='section-two__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-two__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                     <section className='wrapper-optionbar__list-turnstile__turnstile-figures__section-three'>
-                                        <div className='photo-bottom__left'><div className='photo'></div></div>
-                                        <div className='photo-bottom__right'><div className='photo'></div></div>
+                                        <div className='section-three__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-three__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                 </div>
                             ) : null
                         }
 
-                    {/** ==================== BARRIER BLOCK ==================== */}
+                    {/** ==================== ROOM BLOCK ==================== */}
 
                     <div onClick={this.handleBarrierChange} className='wrapper-optionbar__list-barrier'>
                         <div className='wrapper-optionbar__list-barrier__photo'></div>
-                        <span>Шлагбаумы</span>
+                        <span>Помещения</span>
                     </div>
-                        {barrier ? (
+                        {toggleRoomBlock ? (
                                 <div className='wrapper-optionbar__list-barrier__barrier-figures'>
                                     <section className='wrapper-optionbar__list-barrier__barrier-figures__section-one'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='section-one__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-one__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                     <section className='wrapper-optionbar__list-barrier__barrier-figures__section-two'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='section-two__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-two__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                     <section className='wrapper-optionbar__list-barrier__barrier-figures__section-three'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='section-three__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-three__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                 </div>
                             ) : null
@@ -119,19 +126,19 @@ class OptionBar extends React.Component {
                         <div className='wrapper-optionbar__list-anadromous__photo'></div>
                         <span>Проходные</span>
                     </div>
-                        {anadromous ? (
+                        {toggleAnadromousBlock ? (
                                 <div className='wrapper-optionbar__list-anadromous__anadromous-figures'>
                                     <section className='wrapper-optionbar__list-anadromous__anadromous-figures__section-one'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='section-one__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-one__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                     <section className='wrapper-optionbar__list-anadromous__anadromous-figures__section-two'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='section-two__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-two__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                     <section className='wrapper-optionbar__list-anadromous__anadromous-figures__section-three'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='section-three__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-three__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                 </div>
                             ) : null
@@ -143,56 +150,64 @@ class OptionBar extends React.Component {
                         <div className='wrapper-optionbar__list-wall__photo'></div>
                         <span>Стены</span>
                     </div>
-                        {wall ? (
+                        {toggleWallBlock ? (
                                 <div className='wrapper-optionbar__list-wall__wall-figures'>
                                     <section className='wrapper-optionbar__list-wall__wall-figures__section-one'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='section-one__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-one__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                     <section className='wrapper-optionbar__list-wall__wall-figures__section-two'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='section-two__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-two__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                     <section className='wrapper-optionbar__list-wall__wall-figures__section-three'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='section-three__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-three__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                 </div>
                             ) : null
                         }
 
-                    {/** ==================== PREMISES BLOCK ==================== */}
+                    {/** ==================== FENCING BLOCK ==================== */}
                     
                     <div onClick={this.handlePremisesChange} className='wrapper-optionbar__list-premises'>
                         <div className='wrapper-optionbar__list-premises__photo'></div>
-                        <span>Помещения</span>
+                        <span>Ограждения</span>
                     </div>
-                        {premises ? (
+                        {toggleFencingBlock ? (
                                 <div className='wrapper-optionbar__list-premises__premises-figures'>
                                     <section className='wrapper-optionbar__list-premises__premises-figures__section-one'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='section-one__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-one__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                     <section className='wrapper-optionbar__list-premises__premises-figures__section-two'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='section-two__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-two__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                     <section className='wrapper-optionbar__list-premises__premises-figures__section-three'>
-                                        <div>Figure</div>
-                                        <div>Figure</div>
+                                        <div className='section-three__wrapper-photo-left'><div className='photo'></div></div>
+                                        <div className='section-three__wrapper-photo-right'><div className='photo'></div></div>
                                     </section>
                                 </div>
                             ) : null
                         }
-                    {/*<div className='wrapper-optionbar__list-3dmodel'>
-                        3D-Модель
-                    </div>*/}
                 </div>
             </div>
         )
     }
 }
 OptionBar.propTypes = {
-    some: PropTypes.bool
+    toogleOption: PropTypes.object,
+    errors: PropTypes.object
 }
-export default connect(null, null)(OptionBar)
+const mapStateToProps = state => ({
+    toggleOption: state.toggleOption
+})
+const mapDispatchToProps = {
+    toggleTurnstilleBlock,
+    toggleRoomBlock,
+    toggleAnadromousBlock,
+    toggleWallBlock,
+    toggleFencingBlock 
+}
+export default connect(mapStateToProps, mapDispatchToProps)(OptionBar)

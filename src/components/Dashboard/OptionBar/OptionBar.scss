@@ -167,7 +167,7 @@
         align-items: center;
         width: 100%;
 
-        & > .photo-top__left {
+        & > .section-one__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
@@ -179,7 +179,7 @@
                 background-size: contain;
             }
         }
-        & > .photo-top__right {
+        & > .section-one__wrapper-photo-right {
             width: 120px;
             height: 120px;
             margin: 5px;
@@ -199,7 +199,7 @@
         align-items: center;
         width: 100%;
 
-        & > .photo-center__left {
+        & > .section-two__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
@@ -211,7 +211,7 @@
                 background-size: contain;
             }
         }
-        & > .photo-center__right {
+        & > .section-two__wrapper-photo-right {
             width: 120px;
             height: 120px;
             margin: 5px;
@@ -231,7 +231,7 @@
         align-items: center;
         width: 100%;
 
-        & > .photo-bottom__left {
+        & > .section-three__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
@@ -243,7 +243,7 @@
                 background-size: contain;
             }
         }
-        & > .photo-bottom__right {
+        & > .section-three__wrapper-photo-right {
             width: 120px;
             height: 120px;
             margin: 5px;
@@ -258,7 +258,7 @@
     }
 }
 
-// =========== BARRIER =========== //
+// =========== ROOM =========== //
 
 .wrapper-optionbar__list-barrier__barrier-figures {
     display: flex;
@@ -272,18 +272,31 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        //border: 1px solid red;
         width: 100%;
 
-        & > div {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        & > .section-one__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
-            border: 1px solid $red;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/room1.png') no-repeat center;
+                background-size: contain;
+            }
+        }
+        & > .section-one__wrapper-photo-right {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/room1.png') no-repeat center;
+                background-size: contain;
+            }
         }
     }
     .wrapper-optionbar__list-barrier__barrier-figures__section-two {
@@ -291,18 +304,31 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        //border: 1px solid red;
         width: 100%;
 
-        & > div {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        & > .section-two__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
-            border: 1px solid $red;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/room1.png') no-repeat center;
+                background-size: contain;
+            }
+        }
+        & > .section-two__wrapper-photo-right {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/room1.png') no-repeat center;
+                background-size: contain;
+            }
         }
     }
     .wrapper-optionbar__list-barrier__barrier-figures__section-three {
@@ -310,18 +336,31 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        //border: 1px solid red;
         width: 100%;
 
-        & > div {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        & > .section-three__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
-            border: 1px solid $red;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/room1.png') no-repeat center;
+                background-size: contain;
+            }
+        }
+        & > .section-three__wrapper-photo-right {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/room1.png') no-repeat center;
+                background-size: contain;
+            }
         }
     }
 }
@@ -340,18 +379,31 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        //border: 1px solid red;
         width: 100%;
 
-        & > div {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        & > .section-one__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
-            border: 1px solid $red;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/anadromous1.png') no-repeat center;
+                background-size: contain;
+            }
+        }
+        & > .section-one__wrapper-photo-right {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/anadromous2.png') no-repeat center;
+                background-size: contain;
+            }
         }
     }
     .wrapper-optionbar__list-anadromous__anadromous-figures__section-two {
@@ -359,18 +411,31 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        //border: 1px solid red;
         width: 100%;
 
-        & > div {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        & > .section-two__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
-            border: 1px solid $red;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/anadromous2.png') no-repeat center;
+                background-size: contain;
+            }
+        }
+        & > .section-two__wrapper-photo-right {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/anadromous1.png') no-repeat center;
+                background-size: contain;
+            }
         }
     }
     .wrapper-optionbar__list-anadromous__anadromous-figures__section-three {
@@ -378,18 +443,31 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        //border: 1px solid red;
         width: 100%;
 
-        & > div {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        & > .section-three__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
-            border: 1px solid $red;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/anadromous1.png') no-repeat center;
+                background-size: contain;
+            }
+        }
+        & > .section-three__wrapper-photo-right {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/anadromous2.png') no-repeat center;
+                background-size: contain;
+            }
         }
     }
 }
@@ -408,18 +486,31 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        //border: 1px solid red;
         width: 100%;
 
-        & > div {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        & > .section-one__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
-            border: 1px solid $red;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/wall-vertical.jpg') no-repeat center;
+                background-size: contain;
+            }
+        }
+        & > .section-one__wrapper-photo-right {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/wall-horizontal.jpg') no-repeat center;
+                background-size: contain;
+            }
         }
     }
     .wrapper-optionbar__list-wall__wall-figures__section-two {
@@ -427,18 +518,31 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        //border: 1px solid red;
         width: 100%;
 
-        & > div {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        & > .section-two__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
-            border: 1px solid $red;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/wall-horizontal.jpg') no-repeat center;
+                background-size: contain;
+            }
+        }
+        & > .section-two__wrapper-photo-right {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/wall-vertical.jpg') no-repeat center;
+                background-size: contain;
+            }
         }
     }
     .wrapper-optionbar__list-wall__wall-figures__section-three {
@@ -446,18 +550,31 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        //border: 1px solid red;
         width: 100%;
 
-        & > div {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        & > .section-three__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
-            border: 1px solid $red;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/wall-vertical.jpg') no-repeat center;
+                background-size: contain;
+            }
+        }
+        & > .section-three__wrapper-photo-right {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/wall-horizontal.jpg') no-repeat center;
+                background-size: contain;
+            }
         }
     }
 }
@@ -476,18 +593,31 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        //border: 1px solid red;
         width: 100%;
 
-        & > div {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        & > .section-one__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
-            border: 1px solid $red;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/fencing1.jpg') no-repeat center;
+                background-size: contain;
+            }
+        }
+        & > .section-one__wrapper-photo-right {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/fencing2.jpg') no-repeat center;
+                background-size: contain;
+            }
         }
     }
     .wrapper-optionbar__list-premises__premises-figures__section-two {
@@ -495,18 +625,31 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        //border: 1px solid red;
         width: 100%;
 
-        & > div {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        & > .section-two__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
-            border: 1px solid $red;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/fencing2.jpg') no-repeat center;
+                background-size: contain;
+            }
+        }
+        & > .section-two__wrapper-photo-right {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/fencing1.jpg') no-repeat center;
+                background-size: contain;
+            }
         }
     }
     .wrapper-optionbar__list-premises__premises-figures__section-three {
@@ -514,18 +657,31 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        //border: 1px solid red;
         width: 100%;
 
-        & > div {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        & > .section-three__wrapper-photo-left {
             width: 120px;
             height: 120px;
             margin: 5px;
-            border: 1px solid $red;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/fencing1.jpg') no-repeat center;
+                background-size: contain;
+            }
+        }
+        & > .section-three__wrapper-photo-right {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted $grey;
+            .photo {
+                height: 100%;
+                background: url('../../../img/canvas-img/fencing1.jpg') no-repeat center;
+                background-size: contain;
+            }
         }
     }
 }
