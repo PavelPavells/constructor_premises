@@ -18,10 +18,10 @@ import { Stage, Layer } from 'react-konva';   /** RECT, TRANSFORMER */
 
 /** ************* MAIN BLOCKS ON DASHBOARD ************* */
 import Rect from '../Figures/Rect';
-import Arrow from '../Figures/Arrow';
+//import Arrow from '../Figures/Arrow';
 import Circle from '../Figures/Circle';
-import Image from '../Figures/Image';
-import Line from '../Figures/Line';
+import { Images1, Images2, Images3 } from '../Figures/Image';
+//import Line from '../Figures/Line';
 import Text from '../Figures/Text';
 
 
@@ -54,17 +54,18 @@ class Canvas extends React.Component {
         this.props.toggleLayers()
     }
     render() {
-        console.log(this.props)
         return(
             <div className='wrapper-canvas'>
-                <div style={{'display': 'block', 'position': 'absolute', 'z-index': '1000'}}>
+                <div style={{'display': 'block', 'position': 'absolute', zIndex: 1000}}>
                     <Stage width={1050} height={550}>
                         <Layer>
-                            <Rect />
-                            <Arrow />
-                            <Circle />
-                            <Line />
-                            {/*<Image />*/}
+                            {/*<Rect />*/}
+                            {/*<Arrow />*/}
+                            {/*<Circle />*/}
+                            {/*<Line />*/}
+                            <Images1 />
+                            <Images2 />
+                            <Images3 />
                             <Text />
                         </Layer>
                     </Stage>

@@ -30,9 +30,9 @@ class LeftBar extends React.Component {
     }
 }
 LeftBar.propTypes = {
-    some: PropTypes.bool
+    toggleOption: PropTypes.object
 }
 const mapStateToprops = state => ({
-    some: state.some
+    toggleOption: state.toggleOption
 })
 export default connect(mapStateToprops, null)(LeftBar)

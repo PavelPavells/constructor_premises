@@ -9,7 +9,7 @@ class Texts extends React.Component {
         super(props)
         this.state = {
             isDragging: false,
-            x: 360,
+            x: 460,
             y: 140
         }
     }
@@ -22,7 +22,7 @@ class Texts extends React.Component {
                 y={y}
                 fontSize={30}
                 strokeWidth={4}
-                fill={isDragging ? '#404040' : '#DC2222'}
+                fill={isDragging ? '#404040' : 'green'}
                 draggable
                 onDragStart={() => {
                     this.setState({
